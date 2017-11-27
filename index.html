@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>ducker</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Dockerized workflow for fullstack and distributed projects</h3>
+					<p>Mikee Delos Santos</p>
+				</section>
+				<section>
+					<section data-background-video="https://i.imgur.com/f462IUj.mp4" data-background-video-loop="loop"></section>
+					<section><h3>Docker?</h3></section>
+				</section>
+				<section>
+					<section>
+						<h3>Today, Cloud and web applications are built using different technologies</h3>
+						<p class="fragment">Microservices</p>
+						<p class="fragment">Service oriented architecture</p>
+					</section>
+					<section>
+						<img style="background:none; border:none; box-shadow:none; position: fixed; right:0%; bottom:30%" data-src="http://downloadicons.net/sites/default/files/business-user-icon-44613.png"/>							
+						<img style="background:none; border:none; box-shadow:none; position: fixed; right:80%; bottom:2%" data-src="https://angular.io/assets/images/logos/angular/angular.png"/>
+						<img style="background:none; border:none; box-shadow:none; position: fixed; right:80%; bottom:40%" data-src="https://upload.wikimedia.org/wikipedia/commons/1/16/Ruby_on_Rails-logo.png"/>
+						<img style="background:none; border:none; box-shadow:none; position: fixed; right:50%; bottom:30%" data-src="https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/postgres/logo.png"/>
+						<img class="fragment" style="background:none; border:none; box-shadow:none; position: fixed; right:50%; bottom:60%" data-src="https://cdn-images-1.medium.com/max/1200/1*cKG1LJvVTaWqSkYSyVqtsQ.png"/>	
+						<img class="fragment" style="background:none; border:none; box-shadow:none; position: fixed; right:45%; bottom:10%; width:300px" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Piwik-logo.svg/500px-Piwik-logo.svg.png"/>
+					</section>
+					<section>
+						<h2>We want to maintain good DevOps</h2>
+						<p class="fragment">Configuration</p>
+						<p class="fragment">For ease of development (workflows)</p>
+						<p class="fragment">For ease of deployment and bugfixes (velocity,mttr)</p>
+						<p class="fragment">Testing (automated and manual)</p>
+					</section>
+					<section><img style="border:none;box-shadow:none;background:none;" data-src="https://www.docker.com/sites/default/files/vertical_large.png"></section>
+					<section>
+						<h3>Docker</h3>
+						<p>Is a platform where you can configure, deploy and manage multiple small VMs called "containers"</p>
+					</section>
+					<section data-background="https://coloadx.com/wp-content/uploads/2017/01/Wallpapers-1440x900.jpg"></section>
+					<section>
+						<img style="background:none;  border:none; box-shadow:none; position: fixed; right:0%; bottom:30%" data-src="http://downloadicons.net/sites/default/files/business-user-icon-44613.png"/>							
+						<img style="background:none;  box-shadow:none; position: fixed; right:80%; bottom:2%" data-src="https://angular.io/assets/images/logos/angular/angular.png"/>
+						<img style="background:none;  box-shadow:none; position: fixed; right:80%; bottom:40%" data-src="https://upload.wikimedia.org/wikipedia/commons/1/16/Ruby_on_Rails-logo.png"/>
+						<img style="background:none;  box-shadow:none; position: fixed; right:50%; bottom:30%" data-src="https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/postgres/logo.png"/>
+						<img style="background:none;  box-shadow:none; position: fixed; right:50%; bottom:60%" data-src="https://cdn-images-1.medium.com/max/1200/1*cKG1LJvVTaWqSkYSyVqtsQ.png"/>	
+						<img style="background:none;  box-shadow:none; position: fixed; right:45%; bottom:10%; width:300px" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Piwik-logo.svg/500px-Piwik-logo.svg.png"/>
+						<img class="fragment" style="background:none;  border:none; box-shadow:none; position: fixed; right:8%; bottom:12%; width:300px" data-src="https://www.docker.com/sites/default/files/vertical_large.png"/>
+					</section>
+					<section data-background="https://thumbs.gfycat.com/LateSoftHoneyeater-size_restricted.gif"></section>
+					<section>
+						<h3>Lessens the configuration and setup needed by new developers in a project</h3>
+						<h3 class="fragment">to bridge the gap between development and production environments</h3>
+					</section>
+					<section>
+						<h2>Lessens the configuration and setup needed by new developers in a project</h2>
+						<p class="fragment">DEMO</p>
+					</section>
+					<section>
+						<h3>to bridge the gap between development and production environments</h3>
+						<p class="fragment">Works for me bugs</p>
+						<p class="fragment">Replicable in build/production but not replicable in dev environment (and vice versa)</p>
+						<p class="fragment">Most (not all) are due to configuration differences between the environments</p>
+					</section>
+					<section>
+						<h2>Testing and CI</h2>
+						<p class="fragment">Configuration of the app is offloaded to Docker</p>
+						<p class="fragment">Consistency</p>
+						<p class="fragment">Support ~ Jenkins, CircleCI, Travis among others</p>
+					</section>
+				</section>
+				<section>
+					<h2>Support</h2>
+					<p class="fragment">OS ~ Windows, Linux, Mac</p>
+					<p class="fragment">Cloud Platforms ~ AWS, Compute Engine, DigitalOcean, Heroku among others..</p>
+				</section>
+				<section>
+					<section><h2>Why would you use Docker?</h2></section>
+					<section><h2>If you need to simulate distributed and networked machines</h2></section>
+					<section data-background="https://success.docker.com/api/images/Docker_Reference_Architecture-_Designing_Scalable,_Portable_Docker_Container_Networks%2F%2Fimages%2Fcnm.png"></section>
+					<section><h2>Your project has many working parts (subsystems),"modes" and is configuration heavy</h2></section>
+					<section data-background="https://success.docker.com/api/images/Docker_Reference_Architecture-_Development_Pipeline_Best_Practices_Using_Docker_EE%2F%2Fimages%2Fgeneral-workflow.png"></section>
+					<section><h2>You need redundancy to scale with demand</h2></section>
+					<section data-background="http://cdn.ttgtmedia.com/rms/onlineImages/contain_swarm_host_desktop.jpg"></section>
+					<section><h2>You need a sandbox environment for your app</h2></section>
+				</section>
+				<section data-background="https://thumbs.gfycat.com/EasyEnlightenedAustraliansilkyterrier-size_restricted.gif"></section>
+				<section><h2>Docker usage metrics</h2></section>
+				<section data-background="https://www.docker.com/sites/default/files/Docker_Supply-chain-V1.5-01.png"></section>
+				<section data-background="https://www.docker.com/sites/default/files/Docker_Survey_DevOps_Alt2-V1.8-01-01.png"></section>
+				<section><h3>https://github.com/markrdelossantos</h3>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
+	
